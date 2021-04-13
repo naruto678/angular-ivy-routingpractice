@@ -1,0 +1,18 @@
+<div class='container'>
+  <div class='row'>
+    <h3> <span class='text text-primary'>Welcome to ServerManager 4.0</span></h3>
+    </div>
+    <div class='row'>
+      <div class='col-xs-8'>
+        <ul class='list-group'>
+          <!--Put the list items here-->
+          <li class='list-group-item' *ngFor='let server of serverList'>
+            {{server.serverName +"-"+ server.serverStatus}} </li>
+          </ul>
+        </div>
+      </div>
+
+      <hr>
+      <server-form-component></server-form-component>
+
+  </div>

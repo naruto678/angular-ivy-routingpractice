@@ -1,0 +1,16 @@
+<div class='container'>
+  <div class='row'>
+    <div class='col-xs-12'>
+  <ul class='list-group'>
+    <li class='list-group-item' *ngFor='let user of userList'>
+        {{user.userName+" "+user.userId}}</li>
+    </ul>
+
+
+    </div>
+    </div>
+  <div class='row'>
+    <button class='btn btn-info' (click)='onLoadData()' >LoadData</button>
+    </div>
+
+</div>

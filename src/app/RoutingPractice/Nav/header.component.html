@@ -1,0 +1,27 @@
+
+<div class='container'>
+  <div class='row'>
+  <nav class='navbar navbar-light bg-light navbar-collapse navbar-expand-sm'>
+      <a routerLink="/" class='navbar-brand'>PracticeSite</a>
+      <button class='navbar-toggler' data-toggle='collapse' data-target="#navbarMenu">
+        <span class='navbar-toggler-icon'></span>
+      </button>
+      <div class='collapse navbar-collapse' id='navbarMenu'>
+      <ul class=' nav nav-tabs'>
+        <li class='nav-item'><a routerLinkActive='active' routerLink="/" class='nav-link'
+        
+          [routerLinkActiveOptions]="{exact:true}"
+        
+        >Home</a></li>
+        <li class='nav-item'><a routerLinkActive='active' routerLink="/server" class='nav-link'>Servers</a></li>
+        <li class='nav-item'> <a routerLinkActive='active' routerLink="/users" class='nav-link'>Users</a></li>
+        </ul>
+        </div>
+    </nav>
+  </div>
+  <div class='row'>
+    <button class='btn btn-primary'(click)="onLoadServer()">Load Servers</button>
+    </div>
+
+
+</div>

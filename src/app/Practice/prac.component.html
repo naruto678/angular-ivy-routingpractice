@@ -1,0 +1,10 @@
+<div class="row">
+	<div class="col-xs-6">
+		<button class="btn btn-primary" (click)="onButtonClick()">Display</button>
+		<p *ngIf="isEnabled">Secret Password:Tuna</p>
+		<p *ngFor="let para of paragraphs;let index=index" [ngStyle]="{'background-color':index <5 ? 'red':'blue'}"
+			[ngClass]="{displayClass:index <5}">
+			{{para}}
+		</p>
+	</div>
+</div>

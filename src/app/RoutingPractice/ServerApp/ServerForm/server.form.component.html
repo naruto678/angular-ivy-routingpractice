@@ -1,0 +1,17 @@
+<div class='container'>
+  <div class='form-group'>
+      <label for='serverName'>ServerName</label>
+      <input class='form-control' id='serverName' [(ngModel)]='tempServerName'/>
+    </div>
+    <div class='form-group'>
+      <label for='serverStatus'>ServerStatus</label>
+      <select id='serverStatus' class='form-control' [(ngModel)]='tempServerStatus'>
+        <option value='active'>Active</option>
+        <option value='inactive'>Inactive</option>
+        <option value='unknown'>Unknown</option>
+
+      </select>
+
+    </div>
+    <button class='btn btn-outline-success' (click)='onSubmit()'>Submit</button>
+</div>

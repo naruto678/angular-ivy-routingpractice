@@ -1,0 +1,51 @@
+<div class='container'>
+ <div class='row'>
+  <div class='col-lg-8'>
+
+  <div class='form-group'>
+    <label for='name' >Title</label>
+    <input class='form-control' id='name' [(ngModel)]='title'/>
+
+  </div>
+
+
+
+  <div class='form-group'>
+    <label for='name' >Title</label>
+    <textarea class='form-control' id='name' [(ngModel)]='content'>
+      </textarea>
+  </div>
+
+  <button class='btn btn-primary' (click)="onSendPosts()" > Send Posts</button>
+  <hr>
+
+  <button class='btn btn-info mr-1 ' (click)='onFetchPosts()'> Fetch Posts</button> 
+  <button class='btn btn-danger mr-1' (click)='onClearPosts()'>Clear Posts</button>
+
+
+  
+</div>
+</div>
+<hr>
+<div class='row'>
+  <div class='col-lg-8'>
+    
+    <p *ngIf='loading'>Loading</p>
+    <p  *ngIf='posts.length==0 && !loading'>No posts available!</p>
+    <div *ngIf='posts.length!=0'>
+    <ul class='list-group'>
+      <div *ngFor='let post of posts'>
+      <li class='list-group-item' >
+
+          <p>Title {{post.title}}</p>
+          <p>Content{{post.content}}</p>
+
+      </li>
+      <hr>
+      </div>
+      </ul>
+
+    </div>
+    </div>
+  </div>
+</div>

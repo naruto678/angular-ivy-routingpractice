@@ -1,0 +1,9 @@
+<div class="row">
+	<div class="col-xs-6">
+		<input type="text" class='form-control'  [(ngModel)]="name" (keydown)="checkStatus()" />
+		<p>Hello {{name}}</p>
+		<button class='btn btn-primary' (click)="onButtonClick()" [disabled]="isEmpty" >ClickMe</button>
+  
+
+	</div>
+</div>
